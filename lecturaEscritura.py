@@ -7,7 +7,7 @@ def leerImagen(nombre):
     plt.show()
     return imagen
 
-def escribirImagen(imagen):
+def escribirImagen(imagen,nombre):
+    plt.title(nombre)
     plt.imshow(imagen, interpolation='nearest', cmap='gray')
     plt.show()
-    

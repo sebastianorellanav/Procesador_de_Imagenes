@@ -17,16 +17,16 @@ kernelBordes = kernel.crearKernelBordes()
 convolucionBorde = convolucion.aplicarConvolucion(imagen,kernelBordes)
 
 #Transformada de fourier
-fourier = fourier.transformadaFourier(imagen)
+fourierOriginal = fourier.transformadaFourier(imagen)
 fourierGaussiano = fourier.transformadaFourier(convolucionGaussiano)
 fourierBorde = fourier.transformadaFourier(convolucionBorde)
 
 #Guardando resultados
-lecturaEscritura.escribirImagen(convolucionGaussiano)
-lecturaEscritura.escribirImagen(convolucionBorde)
-lecturaEscritura.escribirImagen(fourier)
-lecturaEscritura.escribirImagen(fourierGaussiano)
-lecturaEscritura.escribirImagen(fourierGausfourierBordesiano)
-
+lecturaEscritura.escribirImagen(convolucionGaussiano,"Convolucion filtro suavizado Gaussiano")
+lecturaEscritura.escribirImagen(convolucionBorde,"Convolucion filtro detector de bordes")
+lecturaEscritura.escribirImagen(fourierOriginal,"Transformada original")
+lecturaEscritura.escribirImagen(fourierGaussiano,"Transformada suavizado Gaussiano")
+lecturaEscritura.escribirImagen(fourierBorde,"Transformada detector de bordes")
+plt.show()
 
   
