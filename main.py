@@ -6,7 +6,7 @@ import convolucion as convolucion
 
 nombre = "lena512.bmp"
 imagen = lecturaEscritura.leerImagen(nombre)
-kernel = kernel.crearKernel1()
+kernel = kernel.crearKernelGaussiano()
 convolucion = convolucion.aplicarConvolucion(imagen,kernel)
 
 print(convolucion)
