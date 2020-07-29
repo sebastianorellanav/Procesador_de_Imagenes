@@ -18,10 +18,12 @@ def crearKernelGaussiano():
 
 def crearKernelBordes():
     #kernel detector de bordes
-    kernel = np.array([[1, 2, 0, -2, -1],
+    kernel = np.array(
+              [[1, 2, 0, -2, -1],
               [1, 2, 0, -2, -1],
               [1, 2, 0, -2, -1],
               [1, 2, 0, -2, -1],
-              [1, 2, 0, -2, -1]])
+              [1, 2, 0, -2, -1]]
+              )
     
     return kernel

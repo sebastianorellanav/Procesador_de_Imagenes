@@ -13,7 +13,7 @@ def aplicarConvolucion(imagen,kernel):
     [h, w] = imagen.shape
     [p, q] = kernel.shape
     borde = len(kernel) // 2
-    print(p)
+    print(len(kernel))
    
     imagenConMargen = agregarBordesCeros(imagen,w,h,borde)
     [h, w] = imagenConMargen.shape
@@ -21,8 +21,8 @@ def aplicarConvolucion(imagen,kernel):
     nueva =  np.array([])
 
     # Compute convolution between intensity and kernels
-    for x in range(borde, w - borde):
-        for y in range(borde, h - borde):
+    for x in range(borde, h - borde):
+        for y in range(borde, w - borde):
             pixel = 0
             for a in range(len(kernel)):
                 for b in range(len(kernel)):
