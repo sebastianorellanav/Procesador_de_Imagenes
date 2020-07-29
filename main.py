@@ -1,3 +1,5 @@
+#--------------------------------------------------------------------------------------------------------#
+#Importar Librerias
 import numpy as numpy
 import matplotlib.pyplot as plt
 import lecturaEscritura as lecturaEscritura
@@ -5,6 +7,8 @@ import kernel as kernel
 import convolucion as convolucion
 import fourier as fourier
 
+#---------------------------------------------------------------------------------------------------------#
+#Main
 nombre = "lena512.bmp"
 imagen = lecturaEscritura.leerImagen(nombre)
 
@@ -28,5 +32,6 @@ lecturaEscritura.escribirImagen(fourierOriginal,"Transformada original")
 lecturaEscritura.escribirImagen(fourierGaussiano,"Transformada suavizado Gaussiano")
 lecturaEscritura.escribirImagen(fourierBorde,"Transformada detector de bordes")
 plt.show()
+
 
   

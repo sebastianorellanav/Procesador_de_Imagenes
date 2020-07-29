@@ -9,11 +9,10 @@ def agregarBordesCeros(imagen, width, height,borde):
     return nueva
 
 def aplicarConvolucion(imagen,kernel):
-
+    print("Aplicando convolución...")
     [h, w] = imagen.shape
     [p, q] = kernel.shape
     borde = len(kernel) // 2
-    print(len(kernel))
    
     imagenConMargen = agregarBordesCeros(imagen,w,h,borde)
     [h, w] = imagenConMargen.shape
