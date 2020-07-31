@@ -23,3 +23,12 @@ def crearKernelBordes():
               )
     
     return kernel
+
+def crearKernelLaplaciano():
+    #kernel laplaciano
+    kernel = np.array(
+             [[0, 1, 0],
+             [1,-4, 1],
+             [0, 1, 0]]
+             )
+    return kernel

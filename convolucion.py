@@ -13,7 +13,6 @@ def aplicarConvolucion(imagen,kernel):
     [h, w] = imagen.shape
     [p, q] = kernel.shape
     borde = len(kernel) // 2
-    print(len(kernel))
    
     imagenConMargen = agregarBordesCeros(imagen,w,h,borde)
     [h, w] = imagenConMargen.shape
