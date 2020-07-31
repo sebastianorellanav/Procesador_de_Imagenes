@@ -6,6 +6,8 @@ import lecturaEscritura as lecturaEscritura
 import kernel as kernel
 import convolucion as convolucion
 import fourier as fourier
+import filtroSuavizado as fs
+import filtroDetectorBordes as fdb
 
 #---------------------------------------------------------------------------------------------------------#
 #Main
@@ -13,12 +15,10 @@ nombre = "lena512.bmp"
 imagen = lecturaEscritura.leerImagen(nombre)
 
 #Suavizado Gaussiano
-kernelGaussiano = kernel.crearKernelGaussiano()
-convolucionGaussiano = convolucion.aplicarConvolucion(imagen,kernelGaussiano)
+convolucionGaussiano = fs.filtroSuavizado(imagen)
 
 #Detector de bordes
-kernelBordes = kernel.crearKernelBordes()
-convolucionBorde = convolucion.aplicarConvolucion(imagen,kernelBordes)
+convolucionBorde = fdb.filtroDetectorBordes(imagen)
 
 #Transformada de fourier
 fourierOriginal = fourier.transformadaFourier(imagen)

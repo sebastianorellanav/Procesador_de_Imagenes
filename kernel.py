@@ -1,6 +1,7 @@
 import numpy as np
 
-def crearKernel1():
+def crearKernelTest():
+    print("Generando kernel de prueba...")
     kernel = np.array([[256,256,256],
                         [256,256,256],
                         [256,256,256]])

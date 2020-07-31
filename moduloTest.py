@@ -6,38 +6,45 @@ import lecturaEscritura as lecturaEscritura
 import kernel as kernel
 import convolucion as convolucion
 import fourier as fourier
+import filtroSuavizado as fs
+import filtroDetectorBordes as fdb
 
 #--------------------------------------------------------------------------------------------------------#
 #Test
-#Test1: Se comprueba que la convolución con el filtro gaussiano funciona correctamente
 def Test1():
-    print("Test1")
+    print("Test 1")
+    #Leer Imagen
+    nombre = "lena512.bmp"
+    imagen = lecturaEscritura.leerImagen(nombre)
+    
+    #Aplicar convolucion entre el kernel y la imagen
+    Kernel = kernel.crearKernelTest()
+    result = convolucion.aplicarConvolucion(imagen, Kernel)
+
+    return 1
+
+
+#Test1: Se comprueba que la convolución con el filtro gaussiano funciona correctamente
+def Test2():
+    print("Test 2")
     #Leer Imagen
     nombre = "lena512.bmp"
     imagen = lecturaEscritura.leerImagen(nombre)
 
     #Suavizado Gaussiano
-    kernelGaussiano = kernel.crearKernelGaussiano()
-    convolucionGaussiano = convolucion.aplicarConvolucion(imagen,kernelGaussiano)
+    result = fs.filtroSuavizado(imagen)
 
-    #Guardar Imagen
-    lecturaEscritura.escribirImagen(convolucionGaussiano,"Convolucion filtro suavizado Gaussiano")
-    
     return 1
 
-#Test 2: Se comprueba que la convolución con el filtro de bordes funciona correctamente
-def Test2():
-    print("Test2")
+#Test 3: Se comprueba que la convolución con el filtro de bordes funciona correctamente
+def Test3():
+    print("Test 3")
     #Leer Imagen
     nombre = "lena512.bmp"
     imagen = lecturaEscritura.leerImagen(nombre)    
 
     #Detector de bordes
-    kernelBordes = kernel.crearKernelBordes()
-    convolucionBorde = convolucion.aplicarConvolucion(imagen,kernelBordes)
-
-    #Guardar Imagen
-    lecturaEscritura.escribirImagen(convolucionBorde,"Convolucion filtro detector de bordes")
+    result = fdb.filtroDetectorBordes(imagen)
 
     return 1
 
