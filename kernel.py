@@ -1,5 +1,12 @@
+#Importar Librerías
 import numpy as np
 
+#Funciones
+
+#Funcion que crea un kernel de prueba para comprobar si el código de la convolución funciona correctamente.
+#Esta comprobación se realiza en el Test 1.
+#Entrada: -
+#Salida: matriz 
 def crearKernelTest():
     print("Generando kernel de prueba...")
     kernel = np.array([[256,256,256],
@@ -7,6 +14,9 @@ def crearKernelTest():
                         [256,256,256]])
     return kernel
 
+#Función que crea un kernel gaussiano para implementar el filtro de suavizado.
+#Entrada: -
+#Salida: matriz
 def crearKernelGaussiano():
     # Gaussian kernel
     print("Generando kernel gaussiano...")
@@ -18,6 +28,9 @@ def crearKernelGaussiano():
     
     return kernel
 
+#Función que crea un kernel para implementar el filtro detector de bordes.
+#Entrada: -
+#Salida: matriz
 def crearKernelBordes():
     #kernel detector de bordes
     print("Generando kernel de bordes...")

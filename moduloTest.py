@@ -10,7 +10,9 @@ import filtroSuavizado as fs
 import filtroDetectorBordes as fdb
 
 #--------------------------------------------------------------------------------------------------------#
-#Test
+#Test1: Función que comprueba si el algortimo de convolución implementado funciona correctamente
+#Entrada: void
+#Salida: entero
 def Test1():
     print("Test 1")
     #Leer Imagen
@@ -24,7 +26,9 @@ def Test1():
     return 1
 
 
-#Test1: Se comprueba que la convolución con el filtro gaussiano funciona correctamente
+#Test2: Se comprueba que la convolución con el filtro gaussiano funciona correctamente
+#Entrada: void
+#Salida: entero
 def Test2():
     print("Test 2")
     #Leer Imagen
@@ -37,6 +41,8 @@ def Test2():
     return 1
 
 #Test 3: Se comprueba que la convolución con el filtro de bordes funciona correctamente
+#Entrada: void
+#Salida: entero
 def Test3():
     print("Test 3")
     #Leer Imagen
